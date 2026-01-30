@@ -9,12 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "lighthouse": "lhci autorun",
-    "validate:crawlability": "node scripts/validate-crawlability.js",
-    "validate:semantic-html": "node scripts/verify-semantic-html.js",
-    "validate:structured-data": "node scripts/verify-structured-data.js",
-    "validate:heading-hierarchy": "node scripts/verify-heading-hierarchy.js",
-    "validate:all": "npm run validate:semantic-html && npm run validate:heading-hierarchy && npm run build && npm run validate:crawlability && npm run validate:structured-data"
+    "validate:crawlability": "node scripts/validate-crawlability.js"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -24,7 +19,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@lhci/cli": "^0.15.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
