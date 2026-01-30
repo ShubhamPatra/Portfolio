@@ -5,18 +5,29 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-sitemap.js && vite build && node scripts/prerender.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "lighthouse": "lhci autorun",
+    "validate:crawlability": "node scripts/validate-crawlability.js",
+    "validate:semantic-html": "node scripts/verify-semantic-html.js",
+    "validate:structured-data": "node scripts/verify-structured-data.js",
+    "validate:heading-hierarchy": "node scripts/verify-heading-hierarchy.js",
+    "validate:all": "npm run validate:semantic-html && npm run validate:heading-hierarchy && npm run build && npm run validate:crawlability && npm run validate:structured-data"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-helmet-async": "^2.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@lhci/cli": "^0.15.1",
     "@tailwindcss/postcss": "^4.1.18",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
@@ -25,8 +36,12 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "jsdom": "^27.4.0",
+    "mime-types": "^3.0.2",
     "postcss": "^8.5.6",
+    "puppeteer": "^24.36.1",
     "tailwindcss": "^4.1.18",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vitest": "^4.0.18"
   }
 }

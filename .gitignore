@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Documentation archive
+docs-archive
+
+# Test output and Lighthouse CI
+test-output
+.lighthouseci
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -10,23 +10,23 @@ function Projects() {
     const bgColors = ['bg-zine-ink', 'bg-zine-red', '', 'bg-zine-blue', 'bg-zine-ink', 'bg-zine-red', ''];
 
     return (
-        <section className="mb-20 md:mb-40" id="projects">
+        <section id="projects" aria-labelledby="projects-heading" className="mb-20 md:mb-40">
             <div className="relative mb-10 md:mb-20">
                 <SpiderWeb position="top-right" size="sm" className="text-zine-red" />
                 <div className="absolute inset-0 bg-zine-red h-2 transform -skew-y-2"></div>
-                <h3 className="relative font-pixel text-2xl md:text-4xl bg-zine-paper px-2 md:px-4 inline-block transform -rotate-2">THE_EVIDENCE</h3>
+                <h2 id="projects-heading" className="relative font-pixel text-2xl md:text-4xl bg-zine-paper px-2 md:px-4 inline-block transform -rotate-2">THE_EVIDENCE</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                 {projects.map((project, index) => (
-                    <div
+                    <article
                         key={project.id}
                         className="pasted-block distressed-border hover:scale-105 transition-transform !p-4 md:!p-6"
                         style={{ '--rotation': rotations[index % rotations.length] }}
                     >
                         {index % 2 === 0 ? <div className="staple"></div> : <div className="tape"></div>}
-                        <h4 className={`font-pixel text-xs md:text-sm mb-3 md:mb-4 ${bgColors[index % bgColors.length] || 'border-b-2 border-zine-ink'} ${bgColors[index % bgColors.length] ? 'text-white p-2' : ''}`}>
+                        <h3 className={`font-pixel text-xs md:text-sm mb-3 md:mb-4 ${bgColors[index % bgColors.length] || 'border-b-2 border-zine-ink'} ${bgColors[index % bgColors.length] ? 'text-white p-2' : ''}`}>
                             {project.name.toUpperCase().replace(/ /g, '_')}
-                        </h4>
+                        </h3>
                         <p className="font-typewriter text-xs md:text-sm mb-4 md:mb-6">{project.description.slice(0, 100)}...</p>
 
                         {/* Tech Stack */}
@@ -61,7 +61,7 @@ function Projects() {
                                 </a>
                             )}
                         </div>
-                    </div>
+                    </article>
                 ))}
             </div>
         </section>

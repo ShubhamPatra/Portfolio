@@ -41,7 +41,7 @@ export const projects = [
         description: "AI-powered portfolio with Gemini API chatbot. 95+ Lighthouse score.",
         stack: ["React", "Node", "Express", "Gemini API"],
         githubUrl: "https://github.com/ShubhamPatra/nyxfolio",
-        liveUrl: "https://www.shubhampatra.dev"
+        liveUrl: "https://v1.shubhampatra.dev"
     },
     {
         id: 6,

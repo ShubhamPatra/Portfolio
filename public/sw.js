@@ -1,4 +1,4 @@
-const CACHE_NAME = 'shubham-portfolio-v1';
+const CACHE_NAME = 'shubham-portfolio-v2';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
@@ -9,8 +9,41 @@ const ASSETS_TO_CACHE = [
     '/manifest.json',
     '/favicon.svg',
     '/favicon-192x192.png',
-    '/favicon-512x512.png'
+    '/favicon-512x512.png',
+    '/favicon-maskable-192x192.png',
+    '/favicon-maskable-512x512.png'
 ];
+
+// Crawler user agents to detect
+const CRAWLER_USER_AGENTS = [
+    'googlebot',
+    'bingbot',
+    'slurp',
+    'duckduckbot',
+    'baiduspider',
+    'yandexbot',
+    'facebookexternalhit',
+    'twitterbot',
+    'linkedinbot',
+    'whatsapp',
+    'telegrambot',
+    'slackbot',
+    'discordbot',
+    'applebot',
+    'duckduckgo-favicons-bot',
+    'ia_archiver'
+];
+
+/**
+ * Detects if the request is from a crawler/bot
+ * @param {string} userAgent - The user agent string from the request
+ * @returns {boolean} - True if the request is from a crawler
+ */
+function isCrawler(userAgent) {
+    if (!userAgent) return false;
+    const ua = userAgent.toLowerCase();
+    return CRAWLER_USER_AGENTS.some(bot => ua.includes(bot));
+}
 
 // Install event - cache essential assets
 self.addEventListener('install', (event) => {
@@ -44,6 +77,24 @@ self.addEventListener('fetch', (event) => {
     // Skip external requests
     if (!event.request.url.startsWith(self.location.origin)) return;
 
+    // Get user agent from request headers
+    const userAgent = event.request.headers.get('user-agent') || '';
+    
+    // Bypass cache for crawlers - always serve fresh content
+    if (isCrawler(userAgent)) {
+        event.respondWith(
+            fetch(event.request)
+                .catch(() => {
+                    // Even for crawlers, if network fails, try cache as last resort
+                    return caches.match(event.request).then(cachedResponse => {
+                        return cachedResponse || new Response('Offline', { status: 503 });
+                    });
+                })
+        );
+        return;
+    }
+
+    // Normal caching strategy for regular users
     event.respondWith(
         fetch(event.request)
             .then((response) => {

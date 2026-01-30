@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Safe area for maskable icons: 10% padding = 51.2px on each side -->
+  <!-- Content should be within 51.2 to 460.8 (409.6px usable space) -->
+  
+  <!-- Full background -->
+  <rect x="0" y="0" width="512" height="512" fill="#f3f4f1"/>
+  
+  <!-- Content area with safe padding -->
+  <g transform="translate(51.2, 51.2)">
+    <!-- Background with distressed effect (scaled to fit safe area) -->
+    <rect x="0" y="0" width="409.6" height="409.6" fill="#f3f4f1" stroke="#1a1a1a" stroke-width="20" rx="40"/>
+    
+    <!-- Red accent bar -->
+    <rect x="0" y="0" width="409.6" height="54.4" fill="#b91c1c" rx="40" ry="0"/>
+    
+    <!-- Pixel-style "S" letter (centered and scaled) -->
+    <g fill="#1a1a1a">
+      <!-- Top bar -->
+      <rect x="102.4" y="122.4" width="204.8" height="40.8"/>
+      <!-- Left vertical -->
+      <rect x="102.4" y="122.4" width="40.8" height="95.2"/>
+      <!-- Middle bar -->
+      <rect x="102.4" y="204" width="204.8" height="40.8"/>
+      <!-- Right vertical -->
+      <rect x="266.4" y="204" width="40.8" height="95.2"/>
+      <!-- Bottom bar -->
+      <rect x="102.4" y="285.6" width="204.8" height="40.8"/>
+    </g>
+    
+    <!-- Blue accent corner -->
+    <polygon points="327.68,327.68 409.6,327.68 409.6,409.6 327.68,409.6 409.6,327.68" fill="#1e3a8a"/>
+    
+    <!-- Decorative pixel dots -->
+    <rect x="40.96" y="354.24" width="27.2" height="27.2" fill="#b91c1c"/>
+    <rect x="81.92" y="354.24" width="27.2" height="27.2" fill="#1a1a1a"/>
+  </g>
+</svg>
