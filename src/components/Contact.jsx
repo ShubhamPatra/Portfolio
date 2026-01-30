@@ -35,7 +35,7 @@ function Contact() {
                             <ValidationError prefix="Name" field="name" errors={state.errors} className="font-terminal text-zine-red text-sm mt-1" />
                         </div>
                         <div className="relative">
-                            <label htmlFor="email" className="font-terminal text-base sm:text-lg md:text-2xl block mb-1 sm:mb-2 underline">E_MAIL:</label>
+                            <label htmlFor="email" className="font-terminal text-base sm:text-lg md:text-2xl block mb-1 sm:mb-2 underline">ELECTRONIC_MAIL:</label>
                             <input
                                 id="email"
                                 className="w-full bg-transparent border-2 border-zine-ink p-2 sm:p-3 md:p-4 font-typewriter text-sm md:text-base focus:ring-0 focus:border-zine-blue outline-none"
@@ -47,7 +47,7 @@ function Contact() {
                             <ValidationError prefix="Email" field="email" errors={state.errors} className="font-terminal text-zine-red text-sm mt-1" />
                         </div>
                         <div className="relative">
-                            <label htmlFor="message" className="font-terminal text-base sm:text-lg md:text-2xl block mb-1 sm:mb-2 underline">MESSAGE:</label>
+                            <label htmlFor="message" className="font-terminal text-base sm:text-lg md:text-2xl block mb-1 sm:mb-2 underline">MESSAGE_PACKET:</label>
                             <textarea
                                 id="message"
                                 className="w-full bg-transparent border-2 border-zine-ink p-2 sm:p-3 md:p-4 font-typewriter text-sm md:text-base focus:ring-0 focus:border-zine-ink outline-none resize-none"
@@ -64,7 +64,7 @@ function Contact() {
                             type="submit"
                             disabled={state.submitting}
                         >
-                            {state.submitting ? 'TRANSMITTING...' : 'SEND_MESSAGE'}
+                            {state.submitting ? 'TRANSMITTING...' : 'SEND_MESSAGE_NOW'}
                         </button>
                     </form>
                 )}
