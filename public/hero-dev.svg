@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- ===================== -->
+  <!-- BACKGROUND            -->
+  <!-- ===================== -->
+  <rect width="400" height="400" fill="#0f0f0f"/>
+  
+  <!-- ===================== -->
+  <!-- TERMINAL FRAME        -->
+  <!-- Glitched layers       -->
+  <!-- ===================== -->
+  <rect x="46" y="55" width="320" height="280" fill="none" stroke="#1e3a8a" stroke-width="2" opacity="0.5"/>
+  <rect x="37" y="63" width="320" height="280" fill="none" stroke="#b91c1c" stroke-width="1" opacity="0.3"/>
+  <rect x="40" y="60" width="320" height="280" fill="#1a1a1a" stroke="#444" stroke-width="2"/>
+  
+  <!-- ===================== -->
+  <!-- HEADER BAR            -->
+  <!-- ===================== -->
+  <rect x="40" y="60" width="320" height="36" fill="#b91c1c"/>
+  <rect x="200" y="60" width="160" height="36" fill="#a01818" opacity="0.5"/>
+  <text x="200" y="84" font-family="monospace" font-size="13" fill="#f3f4f1" text-anchor="middle" font-weight="bold">ERROR::UNDEFINED_STATE</text>
+  
+  <!-- ===================== -->
+  <!-- PRIMARY ERROR         -->
+  <!-- Heavy glitch          -->
+  <!-- ===================== -->
+  <text x="65" y="135" font-family="monospace" font-size="18" fill="#1e3a8a" font-weight="bold" opacity="0.5">EXCEPTION_THROWN</text>
+  <text x="58" y="137" font-family="monospace" font-size="18" fill="#b91c1c" font-weight="bold" opacity="0.3">EXCEPTION_THROWN</text>
+  <text x="60" y="135" font-family="monospace" font-size="18" fill="#b91c1c" font-weight="bold">EXCEPTION_THROWN</text>
+  
+  <!-- ===================== -->
+  <!-- STACK TRACE           -->
+  <!-- ===================== -->
+  <text x="60" y="170" font-family="monospace" font-size="12" fill="#666">at imagination.init()</text>
+  <text x="60" y="190" font-family="monospace" font-size="12" fill="#666">at creativity.process()</text>
+  <text x="63" y="210" font-family="monospace" font-size="12" fill="#1e3a8a" opacity="0.4">at code.transform()</text>
+  <text x="60" y="210" font-family="monospace" font-size="12" fill="#666">at code.transform()</text>
+  <text x="60" y="230" font-family="monospace" font-size="12" fill="#666">at meaning.emerge()</text>
+  
+  <!-- ===================== -->
+  <!-- GLITCH ARTIFACTS      -->
+  <!-- ===================== -->
+  <rect x="270" y="165" width="70" height="5" fill="#b91c1c" opacity="0.7"/>
+  <rect x="285" y="185" width="55" height="4" fill="#1e3a8a" opacity="0.5"/>
+  <rect x="260" y="198" width="80" height="6" fill="#b91c1c" opacity="0.4"/>
+  <rect x="290" y="220" width="40" height="3" fill="#444"/>
+  <rect x="275" y="245" width="60" height="4" fill="#b91c1c" opacity="0.3"/>
+  
+  <!-- Horizontal glitch lines -->
+  <rect x="40" y="152" width="320" height="1" fill="#b91c1c" opacity="0.2"/>
+  <rect x="40" y="240" width="320" height="2" fill="#1e3a8a" opacity="0.15"/>
+  
+  <!-- ===================== -->
+  <!-- METADATA              -->
+  <!-- ===================== -->
+  <text x="60" y="265" font-family="monospace" font-size="10" fill="#444">origin: human.intention</text>
+  <text x="60" y="280" font-family="monospace" font-size="10" fill="#444">status: unresolved</text>
+  
+  <!-- ===================== -->
+  <!-- CORRUPTED PIXELS      -->
+  <!-- ===================== -->
+  <rect x="320" y="125" width="12" height="12" fill="#b91c1c"/>
+  <rect x="310" y="137" width="8" height="8" fill="#1e3a8a" opacity="0.7"/>
+  <rect x="325" y="140" width="6" height="6" fill="#666"/>
+  
+  <!-- ===================== -->
+  <!-- PROMPT                -->
+  <!-- ===================== -->
+  <text x="63" y="320" font-family="monospace" font-size="13" fill="#1e3a8a" opacity="0.4">&gt; Is this a bug or a feature?</text>
+  <text x="60" y="320" font-family="monospace" font-size="13" fill="#f3f4f1">&gt; Is this a bug or a feature?</text>
+  <rect x="295" y="307" width="10" height="16" fill="#b91c1c"/>
+</svg>

@@ -7,7 +7,7 @@ import { personal } from '../data/personal';
 function Hero() {
     return (
         <section className="relative flex flex-col lg:flex-row items-center gap-6 md:gap-10 mb-16 md:mb-32">
-            <div className="pasted-block distressed-border w-full lg:max-w-2xl z-10 !p-4 md:!p-6" style={{ '--rotation': '-1deg' }}>
+            <div className="pasted-block distressed-border w-full lg:max-w-[44rem] z-10 !p-4 md:!p-6" style={{ '--rotation': '-1deg' }}>
                 <div className="tape hidden md:block"></div>
                 <div className="mb-3 md:mb-4 bg-zine-ink text-white inline-block px-2 md:px-4 py-1 font-pixel text-[8px] md:text-xs">
                     STATUS: {personal.availableForWork ? 'ONLINE' : 'OFFLINE'}
@@ -24,9 +24,9 @@ function Hero() {
                 <div className="pasted-block border-4 border-zine-blue !p-2" style={{ '--rotation': '3deg' }}>
                     <div className="staple"></div>
                     <img
-                        alt="Abstract Code"
-                        className="pixelated w-full aspect-square object-cover grayscale brightness-125 contrast-150"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeoephTXcwRp8nwrzvbv0BwgmO06O2zBm5TjGMrYWgXOMatogyuvoHtMhiLSmAXAI_yK5PcDD3yTyQowmiFtU3X8-I66MuvqDZJQlMz8_Oy-r2XEvwfdEeXDLmiGv7trv963AoKpxDezXgAqIk5wOK3Jjh4MMQ4A9hxfXHKvrQH-heE3JYPku00z_EwytMaSVw_SrPxjahZqGmOpgnqAc1UVDjXVH5eOWDsbOxFRa9T6g0ehBUB5r9thWF_kDyiSZx8beJXWJ_YXE9"
+                        alt="Developer Terminal"
+                        className="w-full aspect-square object-cover"
+                        src="/hero-dev.svg"
                     />
                     <div className="font-pixel text-[6px] md:text-[8px] mt-2 text-zine-blue">FIG. 01: SYSTEM_CRITICAL_FAILURE_OR_ART?</div>
                 </div>
