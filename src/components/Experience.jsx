@@ -1,4 +1,5 @@
 import { experiences } from '../data/experience';
+import SpiderWeb from './SpiderWeb';
 
 /**
  * Experience component - Zine-style redacted resume (mobile responsive)
@@ -10,6 +11,7 @@ function Experience() {
             <h3 className="font-pixel text-xl md:text-3xl mb-8 md:mb-12 text-center transform -rotate-1 underline decoration-zine-red decoration-wavy">
                 REDACTED RESUME
             </h3>
+            <SpiderWeb position="top-left" size="sm" className="text-zine-ink" />
             <div className="space-y-8 md:space-y-12 max-w-4xl mx-auto">
                 {experiences.map((exp, index) => (
                     <div key={exp.id} className="flex flex-col md:flex-row gap-0">

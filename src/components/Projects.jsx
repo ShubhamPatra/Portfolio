@@ -1,4 +1,5 @@
 import { projects } from '../data/projects';
+import SpiderWeb from './SpiderWeb';
 
 /**
  * Projects component - Zine-style evidence section (mobile responsive)
@@ -11,6 +12,7 @@ function Projects() {
     return (
         <section className="mb-20 md:mb-40" id="projects">
             <div className="relative mb-10 md:mb-20">
+                <SpiderWeb position="top-right" size="sm" className="text-zine-red" />
                 <div className="absolute inset-0 bg-zine-red h-2 transform -skew-y-2"></div>
                 <h3 className="relative font-pixel text-2xl md:text-4xl bg-zine-paper px-2 md:px-4 inline-block transform -rotate-2">THE_EVIDENCE</h3>
             </div>

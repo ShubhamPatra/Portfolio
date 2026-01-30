@@ -1,5 +1,6 @@
 import { personal } from '../data/personal';
 import { skillGroups } from '../data/skills';
+import SpiderWeb from './SpiderWeb';
 
 /**
  * About component - Zine-style manifesto and skills (mobile responsive)
@@ -33,6 +34,7 @@ function About() {
                         ))}
                     </div>
                 </div>
+                <SpiderWeb position="bottom-right" size="sm" className="text-zine-paper opacity-30" />
                 <div className="absolute -bottom-6 md:-bottom-10 -right-2 md:-right-5 font-pixel text-3xl md:text-6xl opacity-10 select-none">SKILLS</div>
             </div>
         </section>
