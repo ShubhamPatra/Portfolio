@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubham_Dev_V3_ZINE</title>
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#b91c1c" />
+  <meta name="description" content="Shubham Patra - Full Stack Developer Portfolio" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
+
+  <!-- Fonts (exact same as code.html) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&family=VT323&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CDN (exact same as code.html) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Config (exact same as code.html) -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "zine-red": "#b91c1c",
+            "zine-blue": "#1e3a8a",
+            "zine-paper": "#f3f4f1",
+            "zine-ink": "#1a1a1a",
+          },
+          fontFamily: {
+            "pixel": ["'Press Start 2P'", "cursive"],
+            "typewriter": ["'Special Elite'", "serif"],
+            "terminal": ["'VT323'", "monospace"],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #f3f4f1;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      background-image:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 3px, 3px 100%;
+    }
+
+    .distressed-border {
+      border: 3px solid #1a1a1a;
+      box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+      clip-path: polygon(0.5% 1%, 98% 0%, 100% 97%, 1% 100%, 0% 2%);
+    }
+
+    .pasted-block {
+      background: white;
+      padding: 1.5rem;
+      position: relative;
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+      transform: rotate(var(--rotation, -1deg));
+    }
+
+    .staple {
+      position: absolute;
+      width: 30px;
+      height: 6px;
+      background: #999;
+      border-radius: 2px;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .scanline-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%);
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .tape {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+      width: 80px;
+      height: 30px;
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      transform: rotate(-5deg);
+    }
+
+    .pixelated {
+      image-rendering: pixelated;
+      filter: contrast(120%) grayscale(100%) sepia(20%);
+    }
+
+    ::selection {
+      background-color: #b91c1c;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Service Worker Registration (no install prompt) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered:', registration.scope);
+          })
+          .catch(error => {
+            console.log('SW registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+
+</html>

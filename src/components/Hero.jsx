@@ -1,0 +1,38 @@
+import { personal } from '../data/personal';
+
+/**
+ * Hero component - Zine-style hero section (mobile responsive)
+ * Exact match of code.html lines 101-117
+ */
+function Hero() {
+    return (
+        <section className="relative flex flex-col lg:flex-row items-center gap-6 md:gap-10 mb-16 md:mb-32">
+            <div className="pasted-block distressed-border w-full lg:max-w-2xl z-10 !p-4 md:!p-6" style={{ '--rotation': '-1deg' }}>
+                <div className="tape hidden md:block"></div>
+                <div className="mb-3 md:mb-4 bg-zine-ink text-white inline-block px-2 md:px-4 py-1 font-pixel text-[8px] md:text-xs">
+                    STATUS: {personal.availableForWork ? 'ONLINE' : 'OFFLINE'}
+                </div>
+                <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-pixel text-zine-ink leading-none mb-4 md:mb-6">
+                    HELLO!<br />
+                    <span className="text-zine-red">I'M {personal.name.split(' ')[0].toUpperCase()}</span>
+                </h2>
+                <p className="font-typewriter text-base md:text-xl lg:text-2xl text-zine-ink leading-tight max-w-lg italic">
+                    {personal.tagline} Sometimes it's pretty, sometimes it's just code held together by duct tape and high-latency dreams.
+                </p>
+            </div>
+            <div className="relative w-full max-w-sm md:max-w-md lg:-ml-20 mt-6 lg:mt-0">
+                <div className="pasted-block border-4 border-zine-blue !p-2" style={{ '--rotation': '3deg' }}>
+                    <div className="staple"></div>
+                    <img
+                        alt="Abstract Code"
+                        className="pixelated w-full aspect-square object-cover grayscale brightness-125 contrast-150"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeoephTXcwRp8nwrzvbv0BwgmO06O2zBm5TjGMrYWgXOMatogyuvoHtMhiLSmAXAI_yK5PcDD3yTyQowmiFtU3X8-I66MuvqDZJQlMz8_Oy-r2XEvwfdEeXDLmiGv7trv963AoKpxDezXgAqIk5wOK3Jjh4MMQ4A9hxfXHKvrQH-heE3JYPku00z_EwytMaSVw_SrPxjahZqGmOpgnqAc1UVDjXVH5eOWDsbOxFRa9T6g0ehBUB5r9thWF_kDyiSZx8beJXWJ_YXE9"
+                    />
+                    <div className="font-pixel text-[6px] md:text-[8px] mt-2 text-zine-blue">FIG. 01: SYSTEM_CRITICAL_FAILURE_OR_ART?</div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export default Hero;
