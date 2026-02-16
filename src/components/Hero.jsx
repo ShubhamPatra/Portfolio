@@ -1,4 +1,5 @@
 import { personal } from '../data/personal';
+import MarginNote from './MarginNote';
 
 /**
  * Hero component - Zine-style hero section (mobile responsive)
@@ -7,6 +8,7 @@ import { personal } from '../data/personal';
 function Hero() {
     return (
         <section id="hero" aria-labelledby="hero-heading" className="relative flex flex-col lg:flex-row items-center gap-6 md:gap-10 mb-16 md:mb-32">
+            <MarginNote text="pg. 01 // init_sequence" side="left" className="top-10" />
             <div className="pasted-block distressed-border w-full lg:max-w-[44rem] z-10 !p-4 md:!p-6" style={{ '--rotation': '-1deg' }}>
                 <div className="tape hidden md:block"></div>
                 <div className="mb-3 md:mb-4 bg-zine-ink text-white inline-block px-2 md:px-4 py-1 font-pixel text-[8px] md:text-xs">

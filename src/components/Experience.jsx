@@ -1,5 +1,6 @@
 import { experiences } from '../data/experience';
-import SpiderWeb from './SpiderWeb';
+import InkStamp from './InkStamp';
+import MarginNote from './MarginNote';
 
 /**
  * Experience component - Zine-style redacted resume (mobile responsive)
@@ -7,11 +8,12 @@ import SpiderWeb from './SpiderWeb';
  */
 function Experience() {
     return (
-        <section id="experience" aria-labelledby="experience-heading" className="mb-20 md:mb-40">
+        <section id="experience" aria-labelledby="experience-heading" className="mb-20 md:mb-40 relative">
+            <InkStamp text="TOP SECRET" color="blue" rotation={15} className="top-0 right-4 md:right-12" />
+            <MarginNote text="pg. 02 // career_log" side="left" className="top-20" />
             <h2 id="experience-heading" className="font-pixel text-xl md:text-3xl mb-8 md:mb-12 text-center transform -rotate-1 underline decoration-zine-red decoration-wavy">
                 REDACTED RESUME
             </h2>
-            <SpiderWeb position="top-left" size="sm" className="text-zine-ink" />
             <div className="space-y-8 md:space-y-12 max-w-4xl mx-auto">
                 {experiences.map((exp, index) => (
                     <article key={exp.id} className="flex flex-col md:flex-row gap-0">

@@ -6,8 +6,9 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SpiderWeb from './components/SpiderWeb';
 import SEOHead from './components/SEOHead';
+import ZineDivider from './components/ZineDivider';
+import CropMarks from './components/CropMarks';
 import { siteMetadata } from './data/metadata';
 import { getPortfolioData } from './data/portfolioData';
 import { generateAllStructuredData } from './utils/structuredData';
@@ -28,11 +29,8 @@ function App() {
         structuredData={structuredData}
       />
 
-      {/* Spider Web Decorations */}
-      <SpiderWeb position="top-left" size="lg" className="fixed text-zine-ink z-50" />
-      <SpiderWeb position="top-right" size="md" className="fixed text-zine-red z-50" />
-      <SpiderWeb position="bottom-left" size="sm" className="fixed text-zine-blue z-50" />
-      <SpiderWeb position="bottom-right" size="md" className="fixed text-zine-ink z-50" />
+      {/* Print Crop Marks */}
+      <CropMarks />
 
       {/* Scanline Overlay */}
       <div className="scanline-overlay"></div>
@@ -41,9 +39,13 @@ function App() {
 
       <main id="main-content" className="max-w-7xl mx-auto px-4 pt-32 pb-20 overflow-hidden">
         <Hero />
+        <ZineDivider variant="glitch" />
         <About />
+        <ZineDivider variant="redacted" />
         <Experience />
+        <ZineDivider variant="torn" />
         <Projects />
+        <ZineDivider variant="dashed" />
         <Contact />
       </main>
 

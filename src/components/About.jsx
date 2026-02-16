@@ -1,6 +1,6 @@
 import { personal } from '../data/personal';
 import { skillGroups } from '../data/skills';
-import SpiderWeb from './SpiderWeb';
+import InkStamp from './InkStamp';
 
 /**
  * About component - Zine-style manifesto and skills (mobile responsive)
@@ -9,6 +9,7 @@ import SpiderWeb from './SpiderWeb';
 function About() {
     return (
         <section id="about" aria-labelledby="about-heading" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-20 md:mb-40 relative">
+            <InkStamp text="DECLASSIFIED" color="red" rotation={-8} className="-top-3 right-4 md:right-auto md:left-[45%]" />
             <article className="pasted-block border-2 border-zine-ink self-start !p-4 md:!p-6" style={{ '--rotation': '2deg' }}>
                 <h2 id="about-heading" className="font-pixel text-lg md:text-2xl mb-4 md:mb-8 border-b-4 border-zine-red pb-2 inline-block">MANIFESTO</h2>
                 <p className="font-typewriter text-base md:text-lg leading-relaxed mb-4 md:mb-6">
@@ -34,7 +35,6 @@ function About() {
                         ))}
                     </div>
                 </div>
-                <SpiderWeb position="bottom-right" size="sm" className="text-zine-paper opacity-30" />
                 <div className="absolute -bottom-6 md:-bottom-10 -right-2 md:-right-5 font-pixel text-3xl md:text-6xl opacity-10 select-none">SKILLS</div>
             </article>
         </section>

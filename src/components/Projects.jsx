@@ -1,5 +1,6 @@
 import { projects } from '../data/projects';
-import SpiderWeb from './SpiderWeb';
+import InkStamp from './InkStamp';
+import MarginNote from './MarginNote';
 
 /**
  * Projects component - Zine-style evidence section (mobile responsive)
@@ -10,9 +11,10 @@ function Projects() {
     const bgColors = ['bg-zine-ink', 'bg-zine-red', '', 'bg-zine-blue', 'bg-zine-ink', 'bg-zine-red', ''];
 
     return (
-        <section id="projects" aria-labelledby="projects-heading" className="mb-20 md:mb-40">
+        <section id="projects" aria-labelledby="projects-heading" className="mb-20 md:mb-40 relative">
+            <InkStamp text="EXHIBIT_A" color="ink" rotation={-5} className="-top-2 right-8" />
+            <MarginNote text="pg. 03 // evidence_archive" side="right" className="top-32" />
             <div className="relative mb-10 md:mb-20">
-                <SpiderWeb position="top-right" size="sm" className="text-zine-red" />
                 <div className="absolute inset-0 bg-zine-red h-2 transform -skew-y-2"></div>
                 <h2 id="projects-heading" className="relative font-pixel text-2xl md:text-4xl bg-zine-paper px-2 md:px-4 inline-block transform -rotate-2">THE_EVIDENCE</h2>
             </div>
